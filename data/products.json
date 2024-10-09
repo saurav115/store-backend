@@ -1,0 +1,227 @@
+[
+  {
+    "Store ID": "1",
+    "SKU": "SKU101",
+    "Prod ID": "1001",
+    "Product Name": "Smartphone XYZ",
+    "Price": "299.99",
+    "Date": "2024-09-21",
+    "Product Category": "Electronics"
+  },
+  {
+    "Store ID": "2",
+    "SKU": "SKU102",
+    "Prod ID": "1002",
+    "Product Name": "Laptop ABC",
+    "Price": "799.99",
+    "Date": "2024-09-22",
+    "Product Category": "Computers"
+  },
+  {
+    "Store ID": "3",
+    "SKU": "SKU103",
+    "Prod ID": "1003",
+    "Product Name": "Headphones DEF",
+    "Price": "59.99",
+    "Date": "2024-09-23",
+    "Product Category": "Audio"
+  },
+  {
+    "Store ID": "1",
+    "SKU": "SKU104",
+    "Prod ID": "1004",
+    "Product Name": "Smartwatch GHI",
+    "Price": "199.99",
+    "Date": "2024-09-24",
+    "Product Category": "Wearables"
+  },
+  {
+    "Store ID": "2",
+    "SKU": "SKU105",
+    "Prod ID": "1005",
+    "Product Name": "Tablet JKL",
+    "Price": "399.99",
+    "Date": "2024-09-25",
+    "Product Category": "Tablets"
+  },
+  {
+    "Store ID": "3",
+    "SKU": "SKU106",
+    "Prod ID": "1006",
+    "Product Name": "Camera MNO",
+    "Price": "249.99",
+    "Date": "2024-09-26",
+    "Product Category": "Cameras"
+  },
+  {
+    "Store ID": "1",
+    "SKU": "SKU107",
+    "Prod ID": "1007",
+    "Product Name": "Television PQR",
+    "Price": "499.99",
+    "Date": "2024-09-27",
+    "Product Category": "Home Appliances"
+  },
+  {
+    "Store ID": "2",
+    "SKU": "SKU108",
+    "Prod ID": "1008",
+    "Product Name": "Speaker STU",
+    "Price": "129.99",
+    "Date": "2024-09-28",
+    "Product Category": "Audio"
+  },
+  {
+    "Store ID": "3",
+    "SKU": "SKU109",
+    "Prod ID": "1009",
+    "Product Name": "Gaming Console VWX",
+    "Price": "599.99",
+    "Date": "2024-09-29",
+    "Product Category": "Gaming"
+  },
+  {
+    "Store ID": "1",
+    "SKU": "SKU110",
+    "Prod ID": "1010",
+    "Product Name": "Monitor YZA",
+    "Price": "299.99",
+    "Date": "2024-09-30",
+    "Product Category": "Computers"
+  },
+  {
+    "Store ID": "2",
+    "SKU": "SKU111",
+    "Prod ID": "1011",
+    "Product Name": "Keyboard BCD",
+    "Price": "49.99",
+    "Date": "2024-10-01",
+    "Product Category": "Computers"
+  },
+  {
+    "Store ID": "3",
+    "SKU": "SKU112",
+    "Prod ID": "1012",
+    "Product Name": "Mouse EFG",
+    "Price": "29.99",
+    "Date": "2024-10-02",
+    "Product Category": "Computers"
+  },
+  {
+    "Store ID": "1",
+    "SKU": "SKU113",
+    "Prod ID": "1013",
+    "Product Name": "Printer HIJ",
+    "Price": "149.99",
+    "Date": "2024-10-03",
+    "Product Category": "Office Supplies"
+  },
+  {
+    "Store ID": "2",
+    "SKU": "SKU114",
+    "Prod ID": "1014",
+    "Product Name": "Router KLM",
+    "Price": "99.99",
+    "Date": "2024-10-04",
+    "Product Category": "Networking"
+  },
+  {
+    "Store ID": "3",
+    "SKU": "SKU115",
+    "Prod ID": "1015",
+    "Product Name": "Smartphone NOP",
+    "Price": "699.99",
+    "Date": "2024-10-05",
+    "Product Category": "Electronics"
+  },
+  {
+    "Store ID": "1",
+    "SKU": "SKU116",
+    "Prod ID": "1016",
+    "Product Name": "Laptop QRS",
+    "Price": "899.99",
+    "Date": "2024-10-06",
+    "Product Category": "Computers"
+  },
+  {
+    "Store ID": "2",
+    "SKU": "SKU117",
+    "Prod ID": "1017",
+    "Product Name": "Smartwatch TUV",
+    "Price": "199.99",
+    "Date": "2024-10-07",
+    "Product Category": "Wearables"
+  },
+  {
+    "Store ID": "3",
+    "SKU": "SKU118",
+    "Prod ID": "1018",
+    "Product Name": "Tablet WXY",
+    "Price": "499.99",
+    "Date": "2024-10-08",
+    "Product Category": "Tablets"
+  },
+  {
+    "Store ID": "1",
+    "SKU": "SKU119",
+    "Prod ID": "1019",
+    "Product Name": "Camera ZAB",
+    "Price": "299.99",
+    "Date": "2024-10-09",
+    "Product Category": "Cameras"
+  },
+  {
+    "Store ID": "2",
+    "SKU": "SKU120",
+    "Prod ID": "1020",
+    "Product Name": "Television CDE",
+    "Price": "699.99",
+    "Date": "2024-10-10",
+    "Product Category": "Home Appliances"
+  },
+  {
+    "Store ID": "3",
+    "SKU": "SKU121",
+    "Prod ID": "1021",
+    "Product Name": "Speaker FGH",
+    "Price": "149.99",
+    "Date": "2024-10-11",
+    "Product Category": "Audio"
+  },
+  {
+    "Store ID": "1",
+    "SKU": "SKU122",
+    "Prod ID": "1022",
+    "Product Name": "Gaming Console IJK",
+    "Price": "499.99",
+    "Date": "2024-10-12",
+    "Product Category": "Gaming"
+  },
+  {
+    "Store ID": "2",
+    "SKU": "SKU123",
+    "Prod ID": "1023",
+    "Product Name": "Monitor LMN",
+    "Price": "349.99",
+    "Date": "2024-10-13",
+    "Product Category": "Computers"
+  },
+  {
+    "Store ID": "3",
+    "SKU": "SKU124",
+    "Prod ID": "1024",
+    "Product Name": "Keyboard OPQ",
+    "Price": "69.99",
+    "Date": "2024-10-14",
+    "Product Category": "Computers"
+  },
+  {
+    "Store ID": "1",
+    "SKU": "SKU125",
+    "Prod ID": "1025",
+    "Product Name": "Mouse RST",
+    "Price": "39.99",
+    "Date": "2024-10-15",
+    "Product Category": "Computers"
+  }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "saleId": 1,
+        "productId": "1001",
+        "storeId": "1",
+        "quantity": 5,
+        "saleDate": "2024-10-01",
+        "totalPrice": 1499.95
+    },
+    {
+        "saleId": 2,
+        "productId": "1002",
+        "storeId": "2",
+        "quantity": 3,
+        "saleDate": "2024-10-02",
+        "totalPrice": 2399.97
+    },
+    {
+        "saleId": 3,
+        "productId": "1003",
+        "storeId": "3",
+        "quantity": 7,
+        "saleDate": "2024-10-03",
+        "totalPrice": 419.93
+    },
+    {
+        "saleId": 4,
+        "productId": "1004",
+        "storeId": "1",
+        "quantity": 2,
+        "saleDate": "2024-10-04",
+        "totalPrice": 399.98
+    },
+    {
+        "saleId": 5,
+        "productId": "1005",
+        "storeId": "2",
+        "quantity": 4,
+        "saleDate": "2024-10-05",
+        "totalPrice": 1599.96
+    },
+    {
+        "saleId": 6,
+        "productId": "1006",
+        "storeId": "3",
+        "quantity": 6,
+        "saleDate": "2024-10-06",
+        "totalPrice": 1499.94
+    },
+    {
+        "saleId": 7,
+        "productId": "1007",
+        "storeId": "1",
+        "quantity": 3,
+        "saleDate": "2024-10-07",
+        "totalPrice": 1499.97
+    },
+    {
+        "saleId": 8,
+        "productId": "1008",
+        "storeId": "2",
+        "quantity": 5,
+        "saleDate": "2024-10-08",
+        "totalPrice": 649.95
+    },
+    {
+        "saleId": 9,
+        "productId": "1009",
+        "storeId": "3",
+        "quantity": 2,
+        "saleDate": "2024-10-09",
+        "totalPrice": 1199.98
+    },
+    {
+        "saleId": 10,
+        "productId": "1010",
+        "storeId": "1",
+        "quantity": 4,
+        "saleDate": "2024-10-10",
+        "totalPrice": 1199.96
+    }
+]

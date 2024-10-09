@@ -1,0 +1,21 @@
+[
+    {
+      "storeId": "1",
+      "storeName": "Store A",
+      "location": "New York",
+      "owner": "Retail Owner A"
+    },
+    {
+      "storeId": "2",
+      "storeName": "Store B",
+      "location": "San Francisco",
+      "owner": "Retail Owner B"
+    },
+    {
+      "storeId": "3",
+      "storeName": "Store C",
+      "location": "Chicago",
+      "owner": "Retail Owner C"
+    }
+  ]
+  
