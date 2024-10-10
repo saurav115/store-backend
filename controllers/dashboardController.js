@@ -15,10 +15,10 @@ const getInventoryReport = async (req, res) => {
 
 // Sales Monitoring
 const getSalesReport = async (req, res) => {
-  const { startDate, endDate } = req.query;
+  const { startDate, endDate, storeId, timeFrame } = req.query;
   try {
-    console.log(`Generating sales report from ${startDate} to ${endDate}...`);
-    const report = await generateSalesReport(startDate, endDate);
+    console.log(`Generating sales report from ${startDate} to ${endDate}, for productId: ${productId}, storeId: ${storeId}, timeFrame: ${timeFrame}...`);
+    const report = await generateSalesReport({ startDate, endDate, storeId, timeFrame });
     console.log('Sales report generated successfully');
     res.status(200).json(report);
   } catch (error) {

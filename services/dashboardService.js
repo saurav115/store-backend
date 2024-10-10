@@ -23,47 +23,53 @@ const generateInventoryReport = async () => {
   return inventoryReport;
 };
 
-// Updated Generate Sales Analysis Report
-const generateSalesReport = async (startDate, endDate) => {
-  const salesData = await readJSONFile(SALES_FILE);
-  const productsData = await readJSONFile(PRODUCTS_FILE);
 
-  // Filter sales by the date range (if provided)
+// Generate Sales Analysis Report
+const generateSalesReport = async ({ startDate, endDate, storeId, timeFrame = 'daily' }) => {
+  const salesData = await readJSONFile(SALES_FILE);
+
+  // Filter sales by date range and store
   const filteredSales = salesData.filter(sale => {
       const saleDate = new Date(sale.saleDate);
-      return (!startDate || saleDate >= new Date(startDate)) && (!endDate || saleDate <= new Date(endDate));
+      const isWithinRange = (!startDate || saleDate >= new Date(startDate)) &&
+                            (!endDate || saleDate <= new Date(endDate));
+      const matchesStore = !storeId || sale.storeId === storeId;
+      return isWithinRange && matchesStore;
   });
 
-  // Group sales by date and product, then calculate total sales
-  const salesReport = filteredSales.reduce((report, sale) => {
-      const product = productsData.find(p => p["Prod ID"] === sale.productId);
-      const dateKey = sale.saleDate; // Group by sale date
-      if (!report[dateKey]) {
-          report[dateKey] = [];
+  // Group sales data based on the time frame
+  const groupByTimeFrame = (date) => {
+      const d = new Date(date);
+      if (timeFrame === 'weekly') {
+          const startOfWeek = new Date(d.setDate(d.getDate() - d.getDay()));
+          return startOfWeek.toISOString().split('T')[0];
+      } else if (timeFrame === 'monthly') {
+          return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
       }
+      // Default is daily
+      return d.toISOString().split('T')[0];
+  };
 
-      // Find the product entry in the date group
-      let productEntry = report[dateKey].find(entry => entry.productId === sale.productId);
-      if (!productEntry) {
-          productEntry = {
-              productId: sale.productId,
-              productName: product ? product["Product Name"] : 'Unknown',
-              category: product ? product["Product Category"] : 'Unknown',
-              saleDate: sale.saleDate,
+  // Aggregate sales data by time frame
+  const salesReport = filteredSales.reduce((report, sale) => {
+      const timeKey = groupByTimeFrame(sale.saleDate);
+
+      if (!report[timeKey]) {
+          report[timeKey] = {
+              timeFrame: timeKey,
               totalUnitsSold: 0,
               totalRevenue: 0
           };
-          report[dateKey].push(productEntry);
       }
 
-      // Update sales data for the product
-      productEntry.totalUnitsSold += sale.quantity;
-      productEntry.totalRevenue += sale.totalPrice;
+      // Update sales data
+      report[timeKey].totalUnitsSold += sale.quantity;
+      report[timeKey].totalRevenue += sale.totalPrice;
       return report;
   }, {});
 
-  // Flatten the results to an array
-  return Object.keys(salesReport).flatMap(date => salesReport[date]);
+  // Convert the aggregated sales report into an array
+  return Object.values(salesReport);
 };
 
 
