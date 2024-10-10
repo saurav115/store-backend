@@ -72,38 +72,7 @@ const generateSalesReport = async ({ startDate, endDate, storeId, timeFrame = 'd
   return Object.values(salesReport);
 };
 
-
-// Generate Weekly Sales Unit Monitoring Report
-const generateWeeklySalesReport = async () => {
-  const salesData = await readJSONFile(SALES_FILE);
-  const productsData = await readJSONFile(PRODUCTS_FILE);
-  const currentDate = new Date();
-
-  // Filter sales from the past week
-  const oneWeekAgo = new Date(currentDate.setDate(currentDate.getDate() - 7));
-  const weeklySales = salesData.filter(sale => new Date(sale.saleDate) >= oneWeekAgo);
-
-  // Group sales by product and calculate total units sold
-  const weeklySalesReport = weeklySales.reduce((report, sale) => {
-      const product = productsData.find(p => p["Prod ID"] === sale.productId);
-      if (!report[sale.productId]) {
-          report[sale.productId] = {
-              productId: sale.productId,
-              productName: product ? product["Product Name"] : 'Unknown',
-              category: product ? product["Product Category"] : 'Unknown',
-              totalUnitsSold: 0
-          };
-      }
-      report[sale.productId].totalUnitsSold += sale.quantity;
-      return report;
-  }, {});
-
-  return Object.values(weeklySalesReport);
-};
-
-
 module.exports = {
   generateInventoryReport,
-  generateSalesReport,
-  generateWeeklySalesReport
+  generateSalesReport
 };
