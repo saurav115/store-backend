@@ -94,5 +94,21 @@
     "quantity": 1,
     "date": "2024-10-02",
     "totalPrice": 129.99
+  },
+  {
+    "saleId": 13,
+    "storeId": "3",
+    "productId": "1015",
+    "quantity": 3,
+    "date": "2024-10-14",
+    "totalPrice": 2099.9700000000003
+  },
+  {
+    "saleId": 14,
+    "storeId": "1",
+    "productId": "1001",
+    "quantity": 10,
+    "date": "2024-10-14",
+    "totalPrice": 2999.9
   }
 ]

@@ -1,62 +1,63 @@
 [
-    {
-        "productId": "1001",
-        "storeId": "1",
-        "currentStock": 120,
-        "date": "2024-09-21"
-    },
-    {
-        "productId": "1002",
-        "storeId": "2",
-        "currentStock": 80,
-        "date": "2024-09-22"
-    },
-    {
-        "productId": "1003",
-        "storeId": "3",
-        "currentStock": 50,
-        "date": "2024-09-23"
-    },
-    {
-        "productId": "1004",
-        "storeId": "1",
-        "currentStock": 60,
-        "date": "2024-09-24"
-    },
-    {
-        "productId": "1005",
-        "storeId": "2",
-        "currentStock": 100,
-        "date": "2024-09-25"
-    },
-    {
-        "productId": "1006",
-        "storeId": "3",
-        "currentStock": 45,
-        "date": "2024-09-26"
-    },
-    {
-        "productId": "1007",
-        "storeId": "1",
-        "currentStock": 90,
-        "date": "2024-09-27"
-    },
-    {
-        "productId": "1008",
-        "storeId": "2",
-        "currentStock": 70,
-        "date": "2024-09-28"
-    },
-    {
-        "productId": "1009",
-        "storeId": "3",
-        "currentStock": 30,
-        "date": "2024-09-29"
-    },
-    {
-        "productId": "1010",
-        "storeId": "1",
-        "currentStock": 110,
-        "date": "2024-09-30"
-    }
+  {
+    "productId": "1001",
+    "storeId": "1",
+    "currentStock": 110,
+    "date": "2024-09-21",
+    "lastUpdated": "2024-10-14T19:43:43.495Z"
+  },
+  {
+    "productId": "1002",
+    "storeId": "2",
+    "currentStock": 80,
+    "date": "2024-09-22"
+  },
+  {
+    "productId": "1003",
+    "storeId": "3",
+    "currentStock": 50,
+    "date": "2024-09-23"
+  },
+  {
+    "productId": "1004",
+    "storeId": "1",
+    "currentStock": 60,
+    "date": "2024-09-24"
+  },
+  {
+    "productId": "1005",
+    "storeId": "2",
+    "currentStock": 100,
+    "date": "2024-09-25"
+  },
+  {
+    "productId": "1006",
+    "storeId": "3",
+    "currentStock": 45,
+    "date": "2024-09-26"
+  },
+  {
+    "productId": "1007",
+    "storeId": "1",
+    "currentStock": 90,
+    "date": "2024-09-27"
+  },
+  {
+    "productId": "1008",
+    "storeId": "2",
+    "currentStock": 70,
+    "date": "2024-09-28"
+  },
+  {
+    "productId": "1009",
+    "storeId": "3",
+    "currentStock": 30,
+    "date": "2024-09-29"
+  },
+  {
+    "productId": "1010",
+    "storeId": "1",
+    "currentStock": 110,
+    "date": "2024-09-30"
+  }
 ]
