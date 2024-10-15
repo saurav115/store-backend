@@ -2,6 +2,8 @@ const { readJSONFile, writeJSONFile } = require('../utils/fileUtils');
 const csv = require('csv-parser');
 const fs = require('fs-extra');
 const PRODUCTS_FILE = './data/products.json';
+const REQUIRED_HEADER_MISSING = 'CSV file is missing required headers';
+const READ_ERROR = 'Error in reading CSV file';
 
 const mapToCSVPropNames = (updatedData) => ({
     "Product Name": updatedData.productName,
@@ -22,14 +24,33 @@ const normalizeProductKeys = (product) => ({
     productCategory: product['Product Category'] || 'Others', // Use "Others" if Product Category is missing
 });
 
-// Parse CSV file and update product data
 const parseCSV = (file) => {
     return new Promise((resolve, reject) => {
         console.log('Parsing CSV file...');
         const results = [];
+        let headersValidated = false;
+        const requiredHeaders = ['Store ID', 'SKU', 'Prod ID', 'Product Name', 'Price']; // Define the required headers
+
         fs.createReadStream(file.path)
             .pipe(csv())
+            .on('headers', (headers) => {
+                // Validate headers
+                const missingHeaders = requiredHeaders.filter(header => !headers.includes(header));
+                if (missingHeaders.length > 0) {
+                    console.error(REQUIRED_HEADER_MISSING, missingHeaders);
+                    reject(new Error(`${REQUIRED_HEADER_MISSING}: ${missingHeaders.join(', ')}`));
+                    return; // Stop further processing if headers are invalid
+                }
+                headersValidated = true; // Mark that headers are valid
+                console.log('CSV headers validated successfully.');
+            })
             .on('data', (data) => {
+                // Ensure headers are validated before processing data
+                if (!headersValidated) {
+                    reject(new Error(REQUIRED_HEADER_MISSING));
+                    return;
+                }
+
                 // Skip products that are missing required fields
                 if (!data['Store ID'] || !data['SKU'] || !data['Prod ID'] || !data['Product Name'] || !data['Price']) {
                     console.warn('Missing required fields in product:', data);
@@ -74,11 +95,12 @@ const parseCSV = (file) => {
                 }
             })
             .on('error', (error) => {
-                console.error('Error reading CSV file:', error);
+                console.error(READ_ERROR, error);
                 reject(error);
             });
     });
 };
+
 
 // Search products (with the original casing)
 const getProducts = async (query, storeId, category, minPrice = 0, maxPrice = Infinity) => {
@@ -131,4 +153,4 @@ const updateProduct = async (productId, updatedData) => {
     }
 };
 
-module.exports = { parseCSV, getProducts, updateProduct, getAllCategories };
+module.exports = { parseCSV, getProducts, updateProduct, getAllCategories, REQUIRED_HEADER_MISSING };

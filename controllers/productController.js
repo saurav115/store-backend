@@ -1,4 +1,4 @@
-const { parseCSV, getProducts, updateProduct, getAllCategories } = require('../services/productService');
+const { parseCSV, getProducts, updateProduct, getAllCategories, REQUIRED_HEADER_MISSING } = require('../services/productService');
 
 // Handle CSV uploads
 const uploadPricingFeed = async (req, res) => {
@@ -9,8 +9,13 @@ const uploadPricingFeed = async (req, res) => {
         console.log('CSV file processed successfully');
         res.status(200).json({ message: 'CSV file processed successfully' });
     } catch (error) {
-        console.error('Error processing CSV file:', error);
-        res.status(500).json({ message: 'Error processing CSV', error });
+        console.log("uploadPricingFeed error", error.message)
+        if(error.message?.includes(REQUIRED_HEADER_MISSING)){
+            res.status(400).json({ message: REQUIRED_HEADER_MISSING });
+        }else{
+            console.error('Error processing CSV file:', error);
+            res.status(500).json({ message: 'Error processing CSV', error });
+        }        
     }
 };
 
